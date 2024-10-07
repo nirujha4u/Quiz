@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f0f0f0; 
+    margin: 0;
+    background: #00C9FF;
+    background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);
+    background: linear-gradient(to right, #92FE9D, #00C9FF);
+}
+
+.container {
+    width: 300px;
+    height: 600px;
+    border: 2px solid #7a8599; 
+    border-radius: 10px; 
+    background-color: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column;
+    background-color: #caf0f8;
+    position: relative;
+    background-image: url("bkg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeInScale 1s ease forwards;
+}
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.quiz {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.bkg {
+    background-image: url("quiz.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+    border-bottom:2px solid #7a8599;
+}
+
+
+#quiz-container {
+    opacity: 0;
+    transform: translateY(50px); 
+    animation: slideUpFadeIn 1s ease forwards;
+    animation-delay: 3s; 
+}
+
+@keyframes slideUpFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#submit-btn {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: 3s; 
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.play h1 {
+    animation: bounce 1s ease infinite;
+}
+
+.play {
+    padding: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #FF0000;
+    font-weight: 600;
+    margin-top: 20px;
+    animation: bounce 1s ease infinite;
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+h2 {
+    color: #FF0000;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInBounce 1.5s ease forwards;
+    animation-delay: 1s; 
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+p {
+    margin: 10px 0; 
+    font-size: 21px;
+    font-weight: 600;
+}
+
+input {
+    margin-top: 9px;
+    font-size: 18px;
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    background-color: #1155cb;
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s; 
+    margin-top: 20px;
+    width: 180px;
+}
+
+button:hover {
+    background-color: #1e5289; 
+}
+
+.blinking-text {
+    animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}

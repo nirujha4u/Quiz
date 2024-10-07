@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bkg"></div>
+        <div class="play">
+            <h1>Play to Win Discount!</h1>
+            <button id="start-btn" onclick="startQuiz()">Take a Quiz</button>
+        </div>
+        
+
+        <div class="quiz" style="display:none;">
+            <h2>Let's Play</h2>
+            <div id="quiz-container"></div>
+            <button id="submit-btn" style="display:none;" onclick="checkAnswer()">Submit Answer</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
